@@ -3,7 +3,7 @@ l=int(input())
 m=int(input())
 n=int(input())
 
-if (k+l)%2==(m+n)%2:
+if k==m or l==n:
     print('YES')
 else:
     print('NO')
