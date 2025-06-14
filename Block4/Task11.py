@@ -1,17 +1,14 @@
 def test(N,M,x,y):
-    if x<N-x:
-        if x<y and x<M-y:
-            return x
-        elif y<M-y:
-            return y
-        else:
-            return M - y
-    elif N-x<y and N-x<M-y:
-        return N-x
-    elif y<M-y:
-        return y
+    if N > M:
+        N, M = M, N
+    if x >= N / 2:
+        x = N - x
+    if y >= M / 2:
+        y = M - y
+    if x < y:
+        return x
     else:
-        return M-y
+        return y
 
 if __name__=='main':
     N=int(input())
